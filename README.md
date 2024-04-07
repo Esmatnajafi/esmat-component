@@ -1,5 +1,5 @@
 # Dropdown 
-smal dropdown menu
+small dropdown menu
 
 # INSTALATION
 1. install Node.js and npm on your system
