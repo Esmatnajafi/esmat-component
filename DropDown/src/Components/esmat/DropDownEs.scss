@@ -1,0 +1,55 @@
+// Define Sass variables for dynamic styling
+$primary-color: #007bff;
+$placeholder-color: #6c757d;
+
+
+@mixin flex-column{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+// Styles for the dropdown component
+.dropdown-container {
+  @include flex-column;
+  text-align: center;
+  .card-header {
+    background-color: $primary-color;
+    color: white;
+    padding: 10px;
+    border-radius: 12px;
+    h2 {
+      margin: 0;
+    }
+  }
+
+  .card-body {
+    padding: 10px 0;
+  }
+
+  .form-card {
+    .select-option{
+      width: 100%;
+      padding: 8px;
+      border: 1px solid $primary-color;
+      border-radius: 12px;
+      font-size: 16px;
+      height: 40px;
+      &:focus {
+        outline: none;
+        border-color: darken($primary-color, 10%);
+      }
+      &.placeholder {
+        color: $placeholder-color;
+      }
+      &.selected {
+        height: auto;
+        overflow: visible;
+      }
+      option {
+        font-size: 16px;
+        height: 40px; 
+      }      
+    }  
+  }
+}
