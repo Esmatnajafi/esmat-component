@@ -1,6 +1,7 @@
 // Define Sass variables for dynamic styling
 $primary-color: #007bff;
 $placeholder-color: #6c757d;
+$text-color: #25945a;
 
 
 @mixin flex-column{
@@ -20,6 +21,18 @@ $placeholder-color: #6c757d;
     border-radius: 12px;
     h2 {
       margin: 0;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+  }
+
+  @keyframes fadeIn {
+    0%{
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 
@@ -50,6 +63,6 @@ $placeholder-color: #6c757d;
         font-size: 16px;
         height: 40px; 
       }      
-    }  
+    }    
   }
 }
