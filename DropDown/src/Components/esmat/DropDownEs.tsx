@@ -1,6 +1,11 @@
+// import React and useState hook from React Library
 import React, { useState } from "react";
 
+// a functional component name "Dropdownes" 
 const DropDownEs: React.FC = () => {
+
+  // a state variable "subject" of type string
+  // initial it with an array containing some options
   const [subject, setSubject] = useState<string[]>([
     "facebook",
     "Instagram",
@@ -8,16 +13,20 @@ const DropDownEs: React.FC = () => {
     "X",
     "Whatsapp",
   ]);
+
+  // a state variable "selectedOption" 
   const [selectedOption, setSelectedOption] = useState<string>();
 
   return (
     <>
+    {/* Render the dropdown component */}
       <div className="dropdown-container">
         <div className="card-header">
           <h2>Dropdown</h2>
         </div>
         <div className="card-body">
           <form className="form-card">
+           {/* Render a select dropdown element */}
             <select className={`select-option ${selectedOption ? "selected" : ""}`}
               name=""
               id="form-select"
@@ -26,7 +35,7 @@ const DropDownEs: React.FC = () => {
             >
               <option className="placeholder"
                 value=""
-                disabled={selectedOption !== undefined}
+                disabled={selectedOption !== undefined} // Disable the default option if an option is already selected
               >
                 Select Option
               </option>
