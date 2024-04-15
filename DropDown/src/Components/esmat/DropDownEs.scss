@@ -1,21 +1,12 @@
-// Define Sass variables for dynamic styling
-$primary-color: #007bff;
-$placeholder-color: #6c757d;
-$text-color: #25945a;
-
-
-@mixin flex-column{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 
 // Styles for the dropdown component
 .dropdown-container {
-  @include flex-column;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
   .card-header {
-    background-color: $primary-color;
+    background-color: blue;
     color: white;
     padding: 10px;
     border-radius: 12px;
@@ -44,16 +35,16 @@ $text-color: #25945a;
     .select-option{
       width: 100%;
       padding: 8px;
-      border: 1px solid $primary-color;
+      border: 1px solid pink;
       border-radius: 12px;
       font-size: 16px;
       height: 40px;
       &:focus {
         outline: none;
-        border-color: darken($primary-color, 10%);
+        border-color: darken(blue, 10%);
       }
       &.placeholder {
-        color: $placeholder-color;
+        color: black;
       }
       &.selected {
         height: auto;

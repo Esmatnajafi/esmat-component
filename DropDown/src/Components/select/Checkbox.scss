@@ -1,0 +1,39 @@
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+
+    .checkbox-input {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        outline: none;
+        cursor: pointer;
+        margin-right: 10px;
+
+        &:checked {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        &:checked::after {
+            content: '';
+            display: block;
+            width: 10px;
+            height: 5px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+            position: absolute;
+            top: 4px;
+            left: 7px;
+        }
+    }
+
+    .checkbox-label {
+        font-size: 16px;
+        color: #333;
+    }
+}
